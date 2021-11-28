@@ -1,0 +1,170 @@
+[
+    {
+        "id":1,
+        "titulo": "Casa Gucci",
+        "generos": ["Drama"],
+        "censura": 14,
+        "trailer":"https://youtu.be/juSv4y5_0Xo",
+        "sinopse":"Casa Gucci é inspirada na chocante história real do império da família por trás da italiana casa de moda Gucci. Abrangendo três décadas de amor, traição, decadência, vingança e em última instância, assassinato, vemos o que um nome significa, o que vale e quão longe uma família para se manter no controle."
+    },
+    {
+        "id":2,
+        "titulo": "Imperdoável",
+        "generos": ["Drama","Suspense"],
+        "censura": 14,
+        "trailer":"https://youtu.be/ObM4FGVt-uY",
+        "sinopse":"Após cumprir pena de prisão por um crime violento, Ruth Slater volta ao convívio na sociedade, que se recusa a perdoar seu passado. Discriminada no lugar que já chamou de lar, sua única esperança agora é encontrar a irmã, que ela havia sido forçada a deixar para trás."
+    },
+    {
+        "id":3,
+        "titulo": "Noite Passada em Soho",
+        "generos": ["Terror","Suspense"],
+        "censura": 16,
+        "trailer":"https://youtu.be/bw7tHAfoNpA",
+        "sinopse":"Neste thriller psicológico do aclamado diretor Edgar Wright, uma jovem apaixonada a design de moda chamada Eloise é misteriosamente capaz de entrar na década de 1960, onde encontra uma deslumbrante aspirante a cantora, Sandie. Mas o glamour não é o que parece, e os sonhos do passado começam a desmoronar e tornam-se algo muito mais sombrio. . OBS.: O filme \"Noite passada em Soho\" contém sequências com flashes de luz que podem afetar espectadores suscetíveis a epilepsia e outros distúrbios causados pela sensibilidade à luz."
+    },
+    {
+        "id":4,
+        "titulo": "Eternos",
+        "generos": ["Ação","Aventura","Ficção"],
+        "censura": 12,
+        "trailer":"https://youtu.be/tjO-qmj_vs0",
+        "sinopse":"A história épica, que abrange milhares de anos, apresenta um grupo de heróis imortais forçados a sair das sombras para se reunir contra os inimigos mais antigos da humanidade, os Deviantes."
+    },
+    {
+       "id":5,
+       "titulo" : "Ghostbusters: Mais Além",
+       "generos":["Comédia","Fantasia","Ficção"],
+       "censura":12,
+       "trailer":"https://youtu.be/P0Ze_tGV-RU",
+       "sinopse":"  Uma mãe solteira resolve se mudar para uma pequena cidade do interior com seus filhos, e acaba descobrindo uma conexão com os Caça-Fantasmas originais e o que o seu avô deixou para trás como legado."
+    },
+    {
+        "id":6,
+        "titulo":"Venom: Tempo de Carnificina",
+        "generos":["Ação","Aventura"],
+        "censura":14,
+        "trailer":"https://youtu.be/aiVYED4NVvI",
+        "sinopse":"Em Venom - Tempo de Carnificina, o relacionamento entre Eddie e Venom está evoluindo. Buscando a melhor forma de lidar com a inevitável simbiose, esse dois lados descobrem como viver juntos e, de alguma forma, se tornarem melhores juntos do que separados."
+    },
+    {
+        "id":7,
+        "titulo":"A Família Addams 2 – Pé na Estrada",
+        "generos":["Animação","Aventura"],
+        "censura":0,
+        "trailer":"https://youtu.be/wM7V8_5-YGc",
+        "sinopse":"Uma mãe solteira resolve se mudar para uma pequena cidade do interior com seus filhos, e acaba descobrindo uma conexão com os Caça-Fantasmas originais e o que o seu avô deixou para trás como legado."
+    },
+    {
+        "id":8,
+        "titulo":"Deus Não Esta Morto: O Próximo Capítulo",
+        "generos":["Drama"],
+        "censura":10,
+        "trailer":"https://youtu.be/mElk5FaBeNk",
+        "sinopse":"Após uma inspeção inesperada de uma funcionária do governo local, famílias que educam seus filhos em casa são obrigadas a coloca-los na rede pública de ensino. A funcionária acredita que as crianças estão recebendo uma educação inferior em relação à escola tradicional e estão sendo doutrinadas por suas famílias a crerem na Bíblia. Surpreso com a interferência do governo, e acreditando no direito de educar seus próprios filhos, o reverendo Dave assume a defesa das famílias, e juntos vão a Washington para uma audiência histórica."
+    },
+    {
+        "id":9,
+        "titulo":"Duna",
+        "generos":["Aventura","Drama","Ficção"],
+        "censura":14,
+        "trailer":"https://youtu.be/U_SsfAp_F9Y",
+        "sinopse":"Em um futuro distante, planetas são comandados por casas nobres que fazem parte de um império feudal intergalático. Paul Atreides é um jovem homem cuja família toma controle do planeta deserto Arrakis, também conhecido como Duna. Sendo a única fonte da especiaria melange, a substância mais importante do cosmos, Arrakis se prova ser um planeta nem um pouco fácil de governar."
+    },
+    {
+        "id":10,
+        "titulo":"Marighella",
+        "generos":["Ação","Drama"],
+        "censura":16,
+        "trailer":"https://youtu.be/0KKH7a72kLg",
+        "sinopse":"Cinebiografia de Carlos Marighella, ex-deputado, poeta e guerrilheiro brasileiro que foi assassinado pela ditadura militar em 1969. Adaptação do livro \"Marighella - O Guerrilheiro Que Incendiou o Mundo\", de Mário Magalhães. A direção é do ator Wagner Moura, que faz sua estreia na função."
+    },
+    {
+        "id":11,
+        "titulo":"007 - Sem Tempo Para Morrer",
+        "generos":["Ação","Suspense"],
+        "censura":14,
+        "trailer":"https://youtu.be/FlriFMTIPOg",
+        "sinopse":"O famoso espião James Bond deixou o serviço e está vivendo de forma calma e pacífica na Jamaica. Como tudo que é bom dura pouco, quando o enigmático Safin aparece com uma tecnologia perigosa, seu amigo da CIA, Felix Leiter, pede ajuda. Então, o antigo 007 precisa abandonar seu novo modo de vida para ingressar na missão."
+    },
+    {
+        "id":12,
+        "titulo":"Meu fim. Seu começo.",
+        "generos":["Drama"],
+        "censura":14,
+        "trailer":"https://youtu.be/M6QnttxUk-I",
+        "sinopse":"Nora e Aron se apaixonam à primeira vista quando se encontram no metrô em um dia chuvoso, mas a intensa história de amor entre os dois é interrompida quando Aron é baleado em um assalto a banco e acaba morrendo nos seus braços. O tempo fica em suspenso para Nora. Na busca por suporte e estabilidade, ela acaba se envolvendo com um estranho, mas tem a sensação de que já o conhece."
+    },
+    {
+        "id":13,
+        "titulo":"Uma história de família",
+        "generos":["Drama"],
+        "censura":12,
+        "trailer":"https://youtu.be/4tNCluRgmTk",
+        "sinopse":"O presidente da Family Romance, Ltda, uma empresa que aluga pessoas substitutas para clientes que precisam de ajuda no dia a dia — seja em algum evento social ou durante uma reunião do trabalho —, é contratado para atuar no lugar do pai de uma menina de 12 anos, que está desaparecido."
+    },
+    {
+        "id":14,
+        "titulo":"Monsta X: The Dreaming",
+        "generos":["Documentário"],
+        "censura":16,
+        "trailer":"https://youtu.be/66mPB9qNq_I",
+        "sinopse":"Mais conhecida por suas performances poderosas, icônicas e soberbos, a banda K-pop MONSTA X é amada por - e dedicada a - seus incontáveis ​​fãs ao redor do mundo. Como um presente para seu fandom, este novo filme oferece uma visão íntima de sua jornada rigorosa nos últimos seis anos, incluindo entrevistas individuais exclusivas com cada membro, histórias pessoais de seu tempo na América e um show especial clipe exclusivamente para MONBEBE."
+    },
+    {
+        "id":15,
+        "titulo":"Lutar, Lutar, Lutar - O Filme do Galo",
+        "generos":["Documentário"],
+        "censura":12,
+        "trailer":"https://youtu.be/Hkw-OFNo3SU",
+        "sinopse":"Documentário que conta a história centenária do Clube Atlético Mineiro, desde sua fundação, em 1908, até o título da Copa do Brasil de 2014, passando pela épica conquista da Libertadores de 2013. Um time que nasce da utopia de unir o branco e o preto, o pobre e o rico, e que resiste ao infortúnio e às injustiças dentro e fora de campo. Um documentário que transcende o futebol, e revela o DNA de uma das torcidas mais fiéis e singulares do futebol mundial."
+    },
+    {
+        "id":16,
+        "titulo":"Pixinguinha - Um Homem Carinhoso",
+        "generos":["Drama"],
+        "censura":14,
+        "trailer":"https://youtu.be/ncpx_dTx_I4",
+        "sinopse":"Vida e obra de Alfredo da Rocha Vianna Junior (1897-1973), o Pixinguinha, pai da MPB. Gênio incompreendido e muito à frente de seu tempo, só teve sua importância reconhecida muitos anos depois. A vida do famoso músico, menino negro de classe média baixa é contada desde suas primeiras performances antológicas na flauta; a composição de suas muitas obras primas, dentre as quais “Carinhoso” o verdadeiro hino popular brasileiro, que faz 100 anos em 2017; sua temporada de 6 meses em Paris em 1922 com o retumbante êxito de seu conjunto “Oito Batutas”; seus arranjos como primeiro diretor musical para a Victor americana nos anos 30, sua decadência e ressurgimento nos anos 40; sua consagração nos anos 60 pelas mãos das novas gerações da bossa nova e do jazz; e sua morte na igreja N. S. da Paz no Rio de Janeiro em pleno carnaval de 1973 durante a passagem da Banda de Ipanema."
+    },
+    {
+        "id":17,
+        "titulo":"Bob Cuspe",
+        "generos":["Animação"],
+        "censura":14,
+        "trailer":"https://youtu.be/sXi8hxSxexQ",
+        "sinopse":"No filme, o icônico personagem dos quadrinhos nos anos 80, Bob Cuspe, vive num deserto pós-apocalíptico infestado por astros do pop que estão sempre tentando lhe matar."
+    },
+    {
+        "id":18,
+        "titulo":"Deserto Particular",
+        "generos":["Drama"],
+        "censura":14,
+        "trailer":"https://youtu.be/etuiPgdCA9I",
+        "sinopse":"Daniel é um policial exemplar, mas acaba cometendo um erro que coloca sua carreira em risco. Sem enxergar um horizonte em Curitiba, ele parte em uma jornada à procura de Sara, a mulher com quem ele se relaciona virtualmente e por quem está apaixonado. Este encontro o transformará inteiramente e mudará o seu próprio destino."
+    },
+    {
+        "id":19,
+        "titulo":"Encanto",
+        "generos":["Animação","Aventura","Fantasia"],
+        "censura":0,
+        "trailer":"https://youtu.be/uMuYED1SEAU",
+        "sinopse":"Ambientado na Colômbia a história gira em torno de uma jovem que vive cercada de magia, mas, diferente de sua família, não possui poderes mágicos, e precisará entender os verdadeiros motivos disso. Aviso: \"ENCANTO contém várias cenas com luzes intermitentes que podem afetar pessoas suscetíveis à epilepsia fotossensível ou que sofrem de outras fotossensibilidades.\""
+    },
+    {
+        "id":20,
+        "titulo":"A Crônica Francesa",
+        "generos":["Comédia","Drama"],
+        "censura":14,
+        "trailer":"https://youtu.be/ZMgvkuhVWfc",
+        "sinopse":"O filme é uma carta de amor aos jornalistas. Ambientado na redação de uma revista americana em uma cidade fictícia francesa do século XX, o filme apresenta uma coleção de histórias publicadas na The French Chronicle, a revista em questão."
+    },
+    {
+        "id":21,
+        "titulo":"Chernobyl: O Filme - Os Segredos do Desastre",
+        "generos":["Drama"],
+        "censura":14,
+        "trailer":"https://youtu.be/o2YGWLQELhE",
+        "sinopse":"O filme conta sobre a história de três profissionais que lutaram para evitar um problema ainda maior do que o causado na explosão da usina nuclear de Chernobyl, na Ucrânia Soviética em 1986."
+    }
+]
