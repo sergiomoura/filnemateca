@@ -2,6 +2,25 @@ const { test, expect } = require("@jest/globals");
 const FilmesServices = require("./FilmesServices");
 const fs = require('fs');
 const path = require("path");
+const PATH_FILMES = `${__dirname}/../database/filmes.json`;
+const PATH_BACKUP = `${__dirname}/../database/filmes.bk.json`;
+
+function backupFilmes(){
+    // Fazendo backUp do arquivo de filmes
+    fs.copyFileSync(
+        path.resolve(PATH_FILMES),
+        path.resolve(PATH_BACKUP)
+    );
+}
+
+function restoreFilmes(){
+    // restaurando e removendo o backup;
+    fs.unlinkSync(path.resolve(`${__dirname}/../database/filmes.json`));
+    fs.renameSync(
+        path.resolve(PATH_BACKUP),
+        path.resolve(PATH_FILMES)
+    )
+}
 
 test('Iniciando Testes:', () => { });
 
@@ -89,24 +108,45 @@ if(FilmesServices.salvar) {
     test(
         'Deve salvar o array filmes no arquivo database/filmes.json',
         () => {
-            // Fazendo backUp do arquivo de filmes
-            fs.copyFileSync(
-                path.resolve(`${__dirname}/../database/filmes.json`),
-                path.resolve(`${__dirname}/../database/filmes.bk.json`)
-            );
+            // Fazendo backup de arquivo de filmes
+            backupFilmes();
 
-            let antes = require('../database/filmes.json');
+            // Carregando o conteúdo  de antes
+            let contaudoAntes = require('../database/filmes.json');
+
+            // Carregando as estatísticas de antes
+            let statsAntes = fs.statSync(path.resolve(PATH_FILMES));
+
+            // Executando o salvamento
             FilmesServices.salvar();
-            let depois = require('../database/filmes.json');
-            
-            expect(antes).toEqual(depois)
 
-            // restaurando e removendo o backup;
-            fs.unlinkSync(path.resolve(`${__dirname}/../database/filmes.json`));
-            fs.renameSync(
-                path.resolve(`${__dirname}/../database/filmes.bk.json`),
-                path.resolve(`${__dirname}/../database/filmes.json`)
-            )
+            // Carregando o conteúdo depois
+            let conteudoDepois = require('../database/filmes.json');
+
+            // Carregando estatísticas depois
+            let statsDepois = fs.statSync(path.resolve(PATH_FILMES));
+            
+            // Esperasse que o conteúdo do arquivo não tenha sido alterado.
+            expect(contaudoAntes).toEqual(conteudoDepois)
+
+            // Esperasse que a data de modificação do arquivo tenha mudado
+            expect(statsAntes.mtime.getTime()).not.toEqual(statsDepois.mtime.getTime())
+            
+            // Restaurando backup
+            restoreFilmes();           
         }
     );
+}
+
+if(FilmesServices.adicionar) {
+    test(
+        'Deve adicionar um filme ao final do array de filmes',
+        () => {
+            backupFilmes();
+            FilmesServices.adicionar({});
+            let filmes = require(PATH_FILMES);
+            expect(filmes.pop()).toEqual({});
+            restoreFilmes();
+        }
+    )
 }

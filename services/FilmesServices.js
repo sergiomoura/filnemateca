@@ -2,7 +2,7 @@ const filmes = require('../database/filmes.json');
 const fs = require('fs');
 
 
-module.exports = {
+const services = {
     listarTodos:() =>  {
         return filmes;
     },
@@ -21,5 +21,11 @@ module.exports = {
     },
     salvar: () => {
         fs.writeFileSync(`${__dirname}/../database/filmes.json`, JSON.stringify(filmes,null,4))
+    },
+    adicionar: filme => {
+        filmes.push(filme);
+        services.salvar();
     }
 }
+
+module.exports = services;
