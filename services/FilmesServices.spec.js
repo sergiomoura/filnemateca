@@ -150,3 +150,31 @@ if(FilmesServices.adicionar) {
         }
     )
 }
+
+if(FilmesServices.removerPeloId){
+    test(
+        'Deve remover o filme e04c5908fcdff44d da lista',
+        () => {
+            backupFilmes();
+            const idParaRemover = "e04c5908fcdff44d";
+            let temFilmeAntes = require(PATH_FILMES).find(f=>f.id == idParaRemover) != undefined;
+            FilmesServices.removerPeloId(idParaRemover);
+            let temFilmeDepois = require(PATH_FILMES).find(f=>f.id == idParaRemover) != undefined;
+
+            expect(temFilmeAntes).toEqual(true);
+            expect(temFilmeDepois).toEqual(false);
+
+            restoreFilmes();
+        }
+    );
+
+    test(
+        'Deve emitir o erro "Filme inexistente"',
+        () => {
+            expect(
+                () => {FilmesServices.removerPeloId(0)}
+            ).toThrow('Filme inexistente')
+        }
+    )
+
+}

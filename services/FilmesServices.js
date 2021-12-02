@@ -25,6 +25,14 @@ const services = {
     adicionar: filme => {
         filmes.push(filme);
         services.salvar();
+    },
+    removerPeloId: (id) =>{
+        const pos = filmes.findIndex(f=>f.id == id);
+        if(pos == -1){
+            throw("Filme inexistente")
+        }
+        filmes.splice(pos,1);
+        services.salvar();
     }
 }
 
