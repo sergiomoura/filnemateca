@@ -1,5 +1,7 @@
 const { test, expect } = require("@jest/globals");
 const FilmesServices = require("./FilmesServices");
+const fs = require('fs');
+const path = require("path");
 
 test('Iniciando Testes:', () => { });
 
@@ -81,4 +83,30 @@ if (FilmesServices.buscar) {
             expect(FilmesServices.buscar("asiads")).toEqual([])
         }
     )
+}
+
+if(FilmesServices.salvar) {
+    test(
+        'Deve salvar o array filmes no arquivo database/filmes.json',
+        () => {
+            // Fazendo backUp do arquivo de filmes
+            fs.copyFileSync(
+                path.resolve(`${__dirname}/../database/filmes.json`),
+                path.resolve(`${__dirname}/../database/filmes.bk.json`)
+            );
+
+            let antes = require('../database/filmes.json');
+            FilmesServices.salvar();
+            let depois = require('../database/filmes.json');
+            
+            expect(antes).toEqual(depois)
+
+            // restaurando e removendo o backup;
+            fs.unlinkSync(path.resolve(`${__dirname}/../database/filmes.json`));
+            fs.renameSync(
+                path.resolve(`${__dirname}/../database/filmes.bk.json`),
+                path.resolve(`${__dirname}/../database/filmes.json`)
+            )
+        }
+    );
 }

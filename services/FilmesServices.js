@@ -1,4 +1,6 @@
 const filmes = require('../database/filmes.json');
+const fs = require('fs');
+
 
 module.exports = {
     listarTodos:() =>  {
@@ -16,5 +18,8 @@ module.exports = {
             f => f.titulo.toUpperCase().includes(trecho.toUpperCase())
         )
         return encontrados;
+    },
+    salvar: () => {
+        fs.writeFileSync(`${__dirname}/../database/filmes.json`, JSON.stringify(filmes,null,4))
     }
 }
