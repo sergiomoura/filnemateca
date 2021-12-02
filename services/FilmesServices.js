@@ -1,5 +1,8 @@
+const filmes = require('../database/filmes.json');
+
 module.exports = {
-    load:() =>  {
-        return require('../database/filmes.json');
-    }
+    listartTodos:() =>  {
+        return filmes;
+    },
+
 }
