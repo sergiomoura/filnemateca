@@ -1,7 +1,7 @@
 const filmes = require('../database/filmes.json');
 
 module.exports = {
-    listartTodos:() =>  {
+    listarTodos:() =>  {
         return filmes;
     },
     carregarPeloId: (id) =>{
@@ -10,5 +10,11 @@ module.exports = {
             throw(`Filme inexistente`)
         }
         return filme;
+    },
+    buscar: (trecho) => {
+        let encontrados = filmes.filter(
+            f => f.titulo.toUpperCase().includes(trecho.toUpperCase())
+        )
+        return encontrados;
     }
 }
