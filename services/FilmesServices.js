@@ -34,6 +34,15 @@ const services = {
         }
         filmes.splice(pos,1);
         services.salvar();
+    },
+    alterar: (id, novoFilme) => {
+        let pos = filmes.findIndex(f => f.id==id);
+        if(pos == -1){
+            throw(`Filme inexistente`);
+        }
+        novoFilme.id = filmes[pos].id;
+        filmes[pos] = novoFilme;
+        services.salvar();
     }
 }
 

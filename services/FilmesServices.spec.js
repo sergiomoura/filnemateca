@@ -192,3 +192,19 @@ if(FilmesServices.removerPeloId){
     )
 
 }
+
+if(FilmesServices.alterar){
+    test(
+        'As informações de um filme devem ser alteradas mas o seu id não.',
+        () => {
+            backupFilmes();
+            let filmes = require(PATH_FILMES);
+            let id = filmes[3].id;
+            FilmesServices.alterar(id,{});
+            let filme = require(PATH_FILMES)[3]
+            expect(filme).toEqual({id});
+            restoreFilmes();
+        }
+
+    )
+}
