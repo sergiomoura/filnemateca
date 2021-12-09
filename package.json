@@ -1,0 +1,26 @@
+{
+  "name": "filnemateca",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergiomoura/filnemateca.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sergiomoura/filnemateca/issues"
+  },
+  "homepage": "https://github.com/sergiomoura/filnemateca#readme",
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    
+  }
+}
