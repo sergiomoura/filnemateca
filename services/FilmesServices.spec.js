@@ -145,7 +145,21 @@ if(FilmesServices.adicionar) {
             backupFilmes();
             FilmesServices.adicionar({});
             let filmes = require(PATH_FILMES);
-            expect(filmes.pop()).toEqual({});
+            let filmeAdicionado = filmes.pop();
+            delete filmeAdicionado.id;
+            expect(filmeAdicionado).toEqual({});
+            restoreFilmes();
+        }
+    )
+
+    test(
+        'O id do filme adicionado deve ter uma sequência aleatória de 18 caracteres',
+        () => {
+            backupFilmes();
+            FilmesServices.adicionar({});
+            let filmes = require(PATH_FILMES);
+            let filmeAdicionado = filmes.pop();
+            expect(filmeAdicionado.id).toMatch(/^.{18}$/);
             restoreFilmes();
         }
     )

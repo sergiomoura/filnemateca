@@ -1,6 +1,6 @@
 const filmes = require('../database/filmes.json');
 const fs = require('fs');
-
+const uniqid = require('uniqid')
 
 const services = {
     listarTodos:() =>  {
@@ -23,6 +23,7 @@ const services = {
         fs.writeFileSync(`${__dirname}/../database/filmes.json`, JSON.stringify(filmes,null,4))
     },
     adicionar: filme => {
+        filme.id = uniqid();
         filmes.push(filme);
         services.salvar();
     },
