@@ -244,5 +244,31 @@
         "censura": 14,
         "trailer": "https://youtu.be/o2YGWLQELhE",
         "sinopse": "O filme conta sobre a história de três profissionais que lutaram para evitar um problema ainda maior do que o causado na explosão da usina nuclear de Chernobyl, na Ucrânia Soviética em 1986."
+    },
+    {
+        "id": "1dy41lfwkkx9enc3t",
+        "cartaz": "Miranha.jpg",
+        "titulo": "Homem Aranha: Sem Volta para Casa",
+        "generos": [
+            "Ação",
+            "Ficção",
+            "Comédia"
+        ],
+        "censura": 10,
+        "trailer": "http://youy",
+        "sinopse": "Sinopse do filme que dizem que é bom"
+    },
+    {
+        "id": "1dy41l4rwkx9eqndx",
+        "cartaz": "Miranha.jpg",
+        "titulo": "Homem Aranha: Sem Volta para Casa",
+        "generos": [
+            "Ação",
+            "Ficção",
+            "Comédia"
+        ],
+        "censura": 10,
+        "trailer": "http://youy",
+        "sinopse": "Sinopse do filme que dizem que é bom"
     }
 ]
