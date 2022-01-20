@@ -15,6 +15,18 @@ servidor.get('/filme', (req, res)=>{
     res.send("Filme: Miranha. Sinopse: Os cara piraram o cabeção...");
 })
 
+servidor.get('/filmes/:posicao', (req, res)=>{
+
+    // Capturei a posição do filme desejado
+    let posicao = req.params.posicao;
+
+    // Carregar o array de filmes
+    const filmes = require('./database/filmes.json');
+
+    // Enviar para o cliente o filme da posicao desejada
+    res.send(filmes[posicao])
+})
+
 
 
 // Por o servidor para 'ouvir' as requisições
