@@ -27,6 +27,21 @@ servidor.get('/filmes/:posicao', (req, res)=>{
     res.send(filmes[posicao])
 })
 
+// Criar uma rota que responda à requisição 'http://localhost:3000/busca/????'
+servidor.get('/busca/:trecho', (req, res)=>{
+
+    // 1: Salvar o trecho buscado na variável 'trecho';
+    
+    // 2: Importar o conteúdo de filmes.json para uma constante 'filmes'
+
+    // 3: Filtrar do array filmes, somente os filmes que possuam o trecho no titulo
+    //    (lembrem da função filmes.filter)
+
+    // 4: Enviar para o cliente(usando res.send) o resultado da filtragem.
+
+})
+
+
 
 
 // Por o servidor para 'ouvir' as requisições
