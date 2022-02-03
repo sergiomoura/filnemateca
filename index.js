@@ -37,12 +37,18 @@ servidor.get('/busca/:trecho', (req, res)=>{
     const filmes = require("./database/filmes.json");
 
     // 3: Filtrar do array filmes, somente os filmes que possuam o trecho no titulo
-    //    (lembrem da função filmes.filter)
+    let filtradora = filme => {
+        return filme.titulo.includes(trecho);
+    }
+    let resultadoDaBusca = filmes.filter(filtradora);
 
     // 4: Enviar para o cliente(usando res.send) o resultado da filtragem.
-
-    //res.send("pedrada");
+    res.send(resultadoDaBusca);
 })
+
+servidor.get('/buscaporid/:id',(req,res)=>{});
+
+servidor.get('/generos/:genero',(req,res)=>{});
 
 
 
