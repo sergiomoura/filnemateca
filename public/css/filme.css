@@ -1,0 +1,25 @@
+main.container {
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding-bottom: 50px;
+}
+
+main.container img{
+    width: 100%;
+}
+
+main.container aside span{
+    display: block;
+}
+
+main.container aside .titulo{
+    font-size: 3rem;
+}
+
+main.container aside .sinopse{
+    font-size: 1rem;
+    margin-top: 20px;
+    font-style: italic;
+}

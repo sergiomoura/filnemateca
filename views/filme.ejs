@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Festive&family=Roboto&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/filme.css">
+    <title>Filnemateca</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="logo">Filnemateca</div>
+            <form>
+                <input type="search" name="busca" id="busca">
+            </form>
+        </div>
+    </header>
+    <main class="container">
+        <img src="/img/<%=filme.cartaz%>" alt="<%=filme.titulo%>">
+        <aside>
+            <span class="titulo"><%= filme.titulo %></span>
+            <span class="censura">Censura: <%= filme.censura==0 ? 'Livre' : filme.censura %></span>
+            <span class="generos"><%= filme.generos %></span>
+            <span class="sinopse"><%= filme.sinopse %></span>
+            
+        </aside>
+    </main>
+</body>
+</html>

@@ -1,0 +1,66 @@
+main.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+main article {
+    position: relative;
+    overflow: hidden;
+}
+
+main article img{
+    width: 100%;
+    display: block;
+}
+
+main article a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--cor-primaria-alpha);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+main article a:hover{
+    opacity: 1;
+}
+
+
+main article a span {
+    background-color: #FFF;
+    color: var(--cor-primaria);
+    width:fit-content;
+    display: block;
+    left: -80%;
+    position: relative;
+    transition: left 0.3s ease-out;
+}
+
+main article a:hover span{
+    left: 0;
+}
+
+main article a .titulo{
+    background-color: #000;
+    color: #FFF;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+main article a .duracao{
+    font-size: 0.8rem;
+    padding: 3px;
+    position: relative;
+    top: -5px;
+}

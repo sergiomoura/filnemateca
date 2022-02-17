@@ -18,8 +18,13 @@ const FilmesController = {
         // Carregar o array de filmes
         const filmes = require('../database/filmes.json');
 
-        // Enviar para o cliente o filme da posicao desejada
-        res.send(filmes[posicao])
+        // Enviar para o cliente a view com o filme
+        // da posicao desejada
+        let filme = filmes[posicao];
+        res.render('filme.ejs',{filme})
+
+        // Enviando filme para o cliente
+        // res.send(filmes[posicao]);
     },
     buscaPorTrecho: (req, res) => {
     
