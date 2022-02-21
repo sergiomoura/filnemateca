@@ -1,7 +1,11 @@
 const FilmesController = {
     index: (req,res)=>{
-        console.log("Alguém fez uma requisição....");
-        res.send("Toma aí o que você me pediu...");
+        
+        // Carregar todos os filmes
+        const filmes = require("../database/filmes.json");
+
+        // Renderizar a view index.ejs (ainda não existe) passando os filmes para ela
+        res.render('index.ejs', {filmes});
     },
     listarFilmes: (req,res) => {
         // Importando os filmes
