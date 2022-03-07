@@ -10,7 +10,7 @@ const FilmesController = require('../controllers/FilmesController');
 // Criação das rotas...
 router.get('/', FilmesController.index);
 router.get('/filmes/:posicao', FilmesController.buscaPorPosicao)
-router.get('/busca/:trecho', FilmesController.buscaPorTrecho)
+router.get('/busca', FilmesController.buscaPorTrecho)
 router.get('/buscaporid/:id',FilmesController.buscaPorId);
 router.get('/generos/:genero',FilmesController.buscaPorGenero);
 

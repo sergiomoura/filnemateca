@@ -14,14 +14,7 @@
     <title>Filnemateca</title>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div id="logo">Filnemateca</div>
-            <form>
-                <input type="search" name="busca" id="busca">
-            </form>
-        </div>
-    </header>
+    <%- include("parts/header.ejs") %>
     <main class="container">
         <%
         for(let i=0; i<filmes.length ; i++ ){

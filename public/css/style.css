@@ -46,11 +46,12 @@ header .container{
     align-items: center;
 }
 
-header #logo{
+header #logo a{
     font-family: Festive, cursive;
     font-size: 3rem;
     color: #FFF;
     text-shadow: 2px 2px 4px #000;
+    text-decoration: none;
 }
 
 header input[type="search"]{

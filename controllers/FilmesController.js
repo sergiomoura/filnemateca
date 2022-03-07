@@ -5,7 +5,7 @@ const FilmesController = {
         const filmes = require("../database/filmes.json");
 
         // Renderizar a view index.ejs (ainda não existe) passando os filmes para ela
-        res.render('index.ejs', {filmes});
+        res.render('index.ejs', {filmes: filmes});
     },
     listarFilmes: (req,res) => {
         // Importando os filmes
@@ -33,7 +33,7 @@ const FilmesController = {
     buscaPorTrecho: (req, res) => {
     
         // 1: Salvar o trecho buscado na variável 'trecho';
-        let trecho = req.params.trecho;
+        let trecho = req.query.busca;
         
         // 2: Importar o conteúdo de filmes.json para uma constante 'filmes'
         const filmes = require("../database/filmes.json");
@@ -45,7 +45,7 @@ const FilmesController = {
         let resultadoDaBusca = filmes.filter(filtradora);
     
         // 4: Enviar para o cliente(usando res.send) o resultado da filtragem.
-        res.send(resultadoDaBusca);
+        res.render('index.ejs',{filmes: resultadoDaBusca});
     },
     buscaPorId: (req, res) => {},
     buscaPorGenero: (req, res) => {}
