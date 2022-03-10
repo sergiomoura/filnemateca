@@ -1,7 +1,14 @@
-☐ No arquivo index.ejs, adequar o form para que
+✔ Adequar o index.ejs @done(22-03-07 17:24)
+☐ Readequar a rota get
+router.get('/filmes/:posicao', FilmesController.buscaPorPosicao)
+☐ Codar o controller buscaPorId.
+
+
+
+✔ No arquivo index.ejs, adequar o form para que @done(22-03-07 17:13)
   ele tenha action apontando para a rota /busca
   e método get
 
-☐ No FilmesRouter.js, criar uma rota get para 
+✔ No FilmesRouter.js, criar uma rota get para @done(22-03-07 17:13)
    '/busca'. Essa rota deve direcionar a requisição
    para FilmesController.buscar
