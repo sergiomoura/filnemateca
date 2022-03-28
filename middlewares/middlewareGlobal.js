@@ -5,12 +5,6 @@ module.exports = (req, res, next) => {
     if(hora<8 || hora >= 20){
         res.send("Já tá tarde... vá pra casa");
     } else {
-
-        console.log("A requisição está indo...");
-        
-        next();
-
-        res.end();
-
+        next();       
     }
 }
