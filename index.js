@@ -16,6 +16,9 @@ servidor.set('view engine','ejs');
 // Configurando a pasta public como contenedora dos arquivos estáticos
 servidor.use(express.static(path.join(__dirname, 'public')));
 
+// Põe as informações do formulário no req.body
+servidor.use(express.urlencoded({ extended: false }));
+
 servidor.use(middlewareGlobal)
 
 // Usando o FilmesRouter

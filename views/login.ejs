@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
     <title>Document</title>
 </head>
 <body>
     <form action="/login" method="post">
         <label>
+            <h1>Login</h1>
             <span>Email:</span>
             <input type="text" name="email" id="email">
         </label>
@@ -16,11 +18,7 @@
             <span>Senha:</span>
             <input type="password" name="senha" id="senha">
         </label>
-        <label>
-            <span>Cartão de Crédito:</span>
-            <input type="password" name="cartao" id="senha">
-        </label>
-        <div>
+        <div class="entrar">
             <a href="/esqueci">Esqueceu a senha?</a>
             <button type="submit">Entrar</button>
         </div>
