@@ -1,5 +1,6 @@
 // Importação da biblioteca Express
 const express = require('express');
+const session = require('express-session');
 const path = require('path');
 const middlewareGlobal = require('./middlewares/middlewareGlobal');
 
@@ -15,6 +16,9 @@ servidor.set('view engine','ejs');
 
 // Configurando a pasta public como contenedora dos arquivos estáticos
 servidor.use(express.static(path.join(__dirname, 'public')));
+
+// Configurando o middleware que lida com session
+servidor.use(session({secret:"SEGREDO", saveUninitialized: false, resave: true}));
 
 // Põe as informações do formulário no req.body
 servidor.use(express.urlencoded({ extended: false }));

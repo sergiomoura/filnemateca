@@ -8,22 +8,16 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/login" method="post">
-        <% if(erro == 1){ %>
-            <div>Falha no login</div>
-        <% } %>
+    <form action="/esqueci" method="post">
         <label>
-            <h1>Login</h1>
+            <h1>Esquecido...</h1>
             <span>Email:</span>
             <input type="text" name="email" id="email">
         </label>
-        <label>
-            <span>Senha:</span>
-            <input type="password" name="senha" id="senha">
-        </label>
+
         <div class="entrar">
-            <a href="/esqueci">Esqueceu a senha?</a>
-            <button type="submit">Entrar</button>
+            <a href="/login">Ir para tela de login</a>
+            <button type="submit">Lembrar</button>
         </div>
     </form>
 </body>
