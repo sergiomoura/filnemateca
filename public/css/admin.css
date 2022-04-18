@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body{
+    margin: 0 ;
+    padding:0;
+    background-color:#5946c5 ;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+.input{
+    padding: 6px;
+}
+.input span{
+    display: block;
+    font-size: 10px;
+}
+
+.input input {
+    width: 100%;
+}
+
+.input textarea {
+    width: 100%;
+    padding: 5px;
+    resize: vertical;
+    height: 80px;
+}
+
+#mae{
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    padding: 20px;
+    width: 600px;
+    background-color: #fff;
+}
+main{
+    background-color: #ffff;
+}
+.checkbox{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 10px;
+}
+
+.checkbox > span{
+    display: block;
+    width: 100%;
+    font-size: 10px;
+}
+
+.checkbox label{
+    font-size: 14px;
+}
+
+form > h2{
+    font-size: 40px;
+    color: #5946C5;
+    text-align: center;
+}
+
+.focus {
+    border: solid 1px #CCC;
+    padding: 5px;
+
+}
+
+.focus:focus{
+    outline: 2px solid #5946C5;
+}
+.controles{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.controles > button{
+    padding: 7px;
+    margin: 5px;
+    width: 50%;
+    color: #8A2BE2;
+}

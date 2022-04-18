@@ -5,8 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/admin.css">
 </head>
 <body>
-    Olá! seja muito bem vindo!!!
+    <form method="post" enctype="multipart/form-data" action="/addFilme">
+        <h2>Cadastro de Novo Filme</h2>
+        <div id="mae">
+            <label class="input">
+                <span>Título:</span>
+                <input class="focus"  type="text" name="titulo" id="titulo" placeholder="Digite o Título ">
+            </label>
+            <span>Gênero:</span>
+            <div class="checkbox">
+                <label><input type="checkbox" name="Ação" id="Ação"> Ação</label>
+                <label><input type="checkbox" name="Comédia" id="Comédia"> Comédia</label>
+                <label><input type="checkbox" name="Aventura" id="Aventura"> Aventura</label>
+                <label><input type="checkbox" name="Terror" id="Terror"> Terror</label>
+                <label><input type="checkbox" name="Drama" id="Drama"> Drama</label>
+                <label><input type="checkbox" name="Suspense" id="Suspense"> Suspense</label>
+                <label><input type="checkbox" name="Fantasia" id="Fantasia"> Fantasia</label>
+                <label><input type="checkbox" name="SciFi" id="SciFi"> SciFi</label>
+                <label><input type="checkbox" name="Documentário" id="Documentário"> Documentário</label>
+                <label><input type="checkbox" name="Animação" id="Animação"> Animação</label>
+                <label><input type="checkbox" name="Romance" id="Romance"> Romance</label>
+            </div>
+            <label  class="input">
+                <span>Censura:</span>
+                <input class="focus" type="number" name="censura" id="censura" placeholder="Seleciona a censura '14' ">
+            </label>
+            <label class="input">
+                <span>Sinopse:</span>
+                <textarea class="focus" name="sinopse" id="sinopse" placeholder="Digite a sinopse:"></textarea>
+            </label>
+            <label  class="input">
+                <span>Trailer:</span>
+                <input class="focus" type="text" name="trailer" id="trailer" placeholder="Insira o trailer">
+            </label>
+            <label class="input">
+                <span>Cartaz:</span>
+                <input class="focus" type="file" name="cartaz" id="cartaz" >
+            </label>
+            <div class="controles">
+                <button type="reset">Resetar</button>
+                <button type="submit">Cadastrar</button>
+            </div>
+        </div>
+    </form>
+
+
+
+
+    <main>
+        kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+    </main>
 </body>
 </html>

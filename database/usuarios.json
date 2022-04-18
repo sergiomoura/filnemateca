@@ -6,5 +6,9 @@
     {
         "email":"teste2@teste.com",
         "senha":"teste2"
+    },
+    {
+        "email":"naruto@teste.com",
+        "senha":"teste1"
     }
 ]

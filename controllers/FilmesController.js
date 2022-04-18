@@ -71,7 +71,13 @@ const FilmesController = {
         res.render('filme.ejs',{filme})
 
     },
-    buscaPorGenero: (req, res) => {}
+    buscaPorGenero: (req, res) => {
+
+    },
+    addFilme: (req, res) => {
+        res.send(req.body);
+    }
+
 }
 
 module.exports = FilmesController;
