@@ -5,4 +5,4 @@ const express = require('express');
 const router = express.Router();
 
 // Exportando router
-module.exports(router);
+module.exports = router;
