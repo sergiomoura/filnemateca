@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/filme-form.css">
+</head>
+<body>
+    <form method="post" action="/adm/filmes/<%= filme.id %>/update">
+        <h2>Edição de "<%= filme.titulo %>"</h2>
+        <div id="mae">
+            <div class="form-element-container">
+                <label for="titulo">Título:</label>
+                <input class="form-element"  type="text" name="titulo" id="titulo" value="<%= filme.titulo %>" placeholder="Digite o Título ">
+            </div>
+
+            <div class="form-element-container">
+                <label>Gênero:</label>
+                <div class="checkbox-container">
+                    <label><input <%= filme.generos.includes("Ação")             ? 'checked' : '' %> type="checkbox" value="Ação" name="Ação" id="Ação">Ação</label>
+                    <label><input <%= filme.generos.includes("Comédia")          ? 'checked' : '' %> type="checkbox" value="Comédia" name="Comédia" id="Comédia">Comédia</label>
+                    <label><input <%= filme.generos.includes("Aventura")         ? 'checked' : '' %> type="checkbox" value="Aventura" name="Aventura" id="Aventura">Aventura</label>
+                    <label><input <%= filme.generos.includes("Terror")           ? 'checked' : '' %> type="checkbox" value="Terror" name="Terror" id="Terror">Terror</label>
+                    <label><input <%= filme.generos.includes("Drama")            ? 'checked' : '' %> type="checkbox" value="Drama" name="Drama" id="Drama">Drama</label>
+                    <label><input <%= filme.generos.includes("Suspense")         ? 'checked' : '' %> type="checkbox" value="Suspense" name="Suspense" id="Suspense">Suspense</label>
+                    <label><input <%= filme.generos.includes("Fantasia")         ? 'checked' : '' %> type="checkbox" value="Fantasia" name="Fantasia" id="Fantasia">Fantasia</label>
+                    <label><input <%= filme.generos.includes("SciFi")            ? 'checked' : '' %> type="checkbox" value="SciFi" name="SciFi" id="SciFi">SciFi</label>
+                    <label><input <%= filme.generos.includes("Documentário")     ? 'checked' : '' %> type="checkbox" value="Documentário" name="Documentário" id="Documentário">Documentário</label>
+                    <label><input <%= filme.generos.includes("Animação")         ? 'checked' : '' %> type="checkbox" value="Animação" name="Animação" id="Animação">Animação</label>
+                    <label><input <%= filme.generos.includes("Romance")          ? 'checked' : '' %> type="checkbox" value="Romance" name="Romance" id="Romance">Romance</label>
+                </div>
+            </div>
+            <div class="form-element-container">
+                <label for="censura">Censura:</label>
+                <select class="form-element" name="censura" id="censura">
+                    <option disabled>Selecione uma faixa etária</option>
+                    <option <%= filme.censura == "0" ? 'selected' : '' %> value="0">Livre</option>
+                    <option <%= filme.censura == "10" ? 'selected' : '' %> value="10">a partir de 10 anos</option>
+                    <option <%= filme.censura == "12" ? 'selected' : '' %> value="12">a partir de 12 anos</option>
+                    <option <%= filme.censura == "14" ? 'selected' : '' %> value="14">a partir de 14 anos</option>
+                    <option <%= filme.censura == "16" ? 'selected' : '' %> value="16">a partir de 16 anos</option>
+                    <option <%= filme.censura == "18" ? 'selected' : '' %> value="18">a partir de 18 anos</option>
+                </select>
+            </div>
+            <div class="form-element-container">
+                <label for="sinopse">Sinopse:</label>
+                <textarea class="form-element" name="sinopse" id="sinopse" placeholder="Digite a sinopse:"></textarea>
+            </div>
+            <div class="form-element-container">
+                <label for="trailer">Trailer:</label>
+                <input class="form-element" type="text" name="trailer" id="trailer" placeholder="Insira o trailer">
+            </div>
+            <div class="form-element-container">
+                <label for="">Cartaz:</label>
+                <input class="form-element" type="file" name="cartaz" id="cartaz" >
+            </div>
+            <div class="controles">
+                <button type="reset">Resetar</button>
+                <button type="submit">Cadastrar</button>
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>
