@@ -1,0 +1,15 @@
+// 1 - Fazer com que form de login apareça:
+	- R - Criar a rota (get /adm/login)
+	- C - Criar um controller (AdmController.showLogin)
+	- V -Renderezirar view (login.ejs)
+	- Criar uma view (com form método POST apontando para /adm/login)
+
+// 2 - Receber e tratar form de login
+	- R - Criar a rota POST para /adm/login
+	- C - Criar o controller (AdmController.login)
+	- Redirect para /adm/filmes/create em caso de sucesso mostrando saudação ao usuário
+	- Redirecionar para /adm/login mostrando erro
+	
+// 3 - Proteger as rotas de usuários não logados
+	- Criar um middleware (verificaSeLogado)
+	- Aplicar esse middleware a grupo de rotas a serem protegidas
