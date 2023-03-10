@@ -2,7 +2,9 @@ const admins = require('../database/administradores.json');
 
 const AdmController = {
     showLogin:(req,res) => {
-        res.render('login')
+        const errorLogin = req.query.erro==1;
+
+        res.render('login',{errorLogin})
     },
     login:(req,res) => {
         // res.send(req.body)

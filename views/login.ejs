@@ -15,6 +15,9 @@
     <main class="form-container">
         <h1>Login</h1>        
         <form action="/adm/login" method="POST">
+            <% if(errorLogin) { %>
+                <div> login errado</div>
+                <% } %>
             <input type="email" name="email" placeholder="E-mail">
             <input type="password" name="senha" placeholder="Senha">
             <button type="submit">Entrar</button>
