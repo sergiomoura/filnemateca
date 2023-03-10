@@ -2,7 +2,8 @@
 const express = require('express');
 const PaginasController = require('./controllers/PaginasController');
 const FilmesController = require('./controllers/FilmesController');
-const AdmController = require('./controllers/AdmController')
+const AdmController = require('./controllers/AdmController');
+const verificaSeLogado = require('./middlewares/verificaSeLogado');
 // Criando router
 const router = express.Router();
 
@@ -15,6 +16,8 @@ router.get('/busca', PaginasController.buscarFilmes);
 router.get('/adm/login', AdmController.showLogin)
 router.post('/adm/login', AdmController.login)
 
+
+router.use('/adm', verificaSeLogado);
 router.get('/adm/filmes/create', FilmesController.create);
 router.get('/adm/filmes/:id/edit' , PaginasController.editFilme);
 router.post('/adm/filmes/:id/update' , PaginasController.updateFilme);
