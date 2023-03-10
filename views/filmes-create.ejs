@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/filme-form.css">
+</head>
+<body>
+    <form method="post" action="/adm/filmes/store" enctype="multipart/form-data">
+        <h2>Adição de um filme</h2>
+        <div id="mae">
+            <div class="form-element-container">
+                <label for="titulo">Título:</label>
+                <input class="form-element"  type="text" name="titulo" id="titulo" value="" placeholder="Digite o Título ">
+            </div>
+
+            <div class="form-element-container">
+                <label>Gênero:</label>
+                <div class="checkbox-container">
+                    <label><input type="checkbox" name="generos" value="Ação" id="Ação">Ação</label>
+                    <label><input type="checkbox" name="generos" value="Comédia" id="Comédia">Comédia</label>
+                    <label><input type="checkbox" name="generos" value="Aventura" id="Aventura">Aventura</label>
+                    <label><input type="checkbox" name="generos" value="Terror" id="Terror">Terror</label>
+                    <label><input type="checkbox" name="generos" value="Drama" id="Drama">Drama</label>
+                    <label><input type="checkbox" name="generos" value="Suspense" id="Suspense">Suspense</label>
+                    <label><input type="checkbox" name="generos" value="Fantasia" id="Fantasia">Fantasia</label>
+                    <label><input type="checkbox" name="generos" value="SciFi" id="SciFi">SciFi</label>
+                    <label><input type="checkbox" name="generos" value="Documentário" id="Documentário">Documentário</label>
+                    <label><input type="checkbox" name="generos" value="Animação" id="Animação">Animação</label>
+                    <label><input type="checkbox" name="generos" value="Romance" id="Romance">Romance</label>
+                </div>
+            </div>
+            <div class="form-element-container">
+                <label for="censura">Censura:</label>
+                <select class="form-element" name="censura" id="censura">
+                    <option disabled>Selecione uma faixa etária</option>
+                    <option value="0">Livre</option>
+                    <option value="10">a partir de 10 anos</option>
+                    <option value="12">a partir de 12 anos</option>
+                    <option value="14">a partir de 14 anos</option>
+                    <option value="16">a partir de 16 anos</option>
+                    <option value="18">a partir de 18 anos</option>
+                </select>
+            </div>
+            <div class="form-element-container">
+                <label for="sinopse">Sinopse:</label>
+                <textarea class="form-element" name="sinopse" id="sinopse" placeholder="Digite a sinopse:"></textarea>
+            </div>
+            <div class="form-element-container">
+                <label for="trailer">Trailer:</label>
+                <input class="form-element" type="text" name="trailer" id="trailer" placeholder="Insira o trailer">
+            </div>
+            <div class="form-element-container">
+                <label for="">Cartaz:</label>
+                <input class="form-element" type="file" name="cartaz" id="cartaz" >
+            </div>
+            <div class="controles">
+                <button type="reset">Resetar</button>
+                <button type="submit">Cadastrar</button>
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>

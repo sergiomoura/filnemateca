@@ -15,7 +15,7 @@ router.get('/busca', PaginasController.buscarFilmes);
 router.get('/adm/login', AdmController.showLogin)
 router.post('/adm/login', AdmController.login)
 
-router.get('/filmes/create', FilmesController.create);
+router.get('/adm/filmes/create', FilmesController.create);
 router.get('/adm/filmes/:id/edit' , PaginasController.editFilme);
 router.post('/adm/filmes/:id/update' , PaginasController.updateFilme);
 

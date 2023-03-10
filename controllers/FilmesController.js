@@ -1,6 +1,6 @@
 const FilmesController = {
     create: (req, res) => {
-        res.render('filme-create.ejs');
+        res.render('filmes-create.ejs');
     }
 }
 
