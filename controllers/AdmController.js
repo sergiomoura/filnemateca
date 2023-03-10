@@ -20,9 +20,13 @@ const AdmController = {
         if(adm === undefined){
             res.redirect('/adm/login?erro=1');
         }else{
+            req.session.admLogado=true;
+            req.session.adm=adm;
+
             res.redirect('/adm/filmes/create');
         }
         //Redirecionar para tela /adm/filmes/create
+        
     }
 }
 
