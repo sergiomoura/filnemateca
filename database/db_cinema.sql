@@ -1,4 +1,4 @@
--- Excluir o banco de dados, caso já exista
+-- Excluir o banco de dados, caso jÃ¡ exista
 DROP DATABASE IF EXISTS cinema;
 
 CREATE DATABASE cinema;
@@ -44,12 +44,12 @@ INSERT INTO generos (nome) VALUES
   ('Drama'),
   ('Suspense'),
   ('Terror'),
-  ('Ação'),
+  ('AÃ§Ã£o'),
   ('Aventura'),
-  ('Ficção'),
+  ('FicÃ§Ã£o'),
   ('Fantasia'),
-  ('Animação'),
-  ('Documentário');
+  ('AnimaÃ§Ã£o'),
+  ('DocumentÃ¡rio');
 
 INSERT INTO filmes (cartaz, titulo, censura, trailer, sinopse) 
 VALUES 
@@ -70,26 +70,26 @@ VALUES
 (2, 2), (2, 3), (2, 5);
 
 
--- Consultar todos os filmes e seus gêneros correspondentes:
+-- Consultar todos os filmes e seus gÃªneros correspondentes:
 SELECT filmes.titulo, GROUP_CONCAT(generos.nome SEPARATOR ', ') AS generos
 FROM filmes
 JOIN filmes_generos ON filmes.id = filmes_generos.filme_id
 JOIN generos ON filmes_generos.genero_id = generos.id
-GROUP BY filmes.id
+GROUP BY filmes.id;
 
--- Consultar todos os filmes de um determinado gênero:
+-- Consultar todos os filmes de um determinado gÃªnero:
 SELECT filmes.titulo, GROUP_CONCAT(generos.nome SEPARATOR ', ') AS generos
 FROM filmes
 JOIN filmes_generos ON filmes.id = filmes_generos.filme_id
 JOIN generos ON filmes_generos.genero_id = generos.id
-WHERE generos.nome = 'ação'
-GROUP BY filmes.id
+WHERE generos.nome = 'aÃ§Ã£o'
+GROUP BY filmes.id;
 
--- Consultar os gêneros mais populares:
+-- Consultar os gÃªneros mais populares:
 SELECT generos.nome, COUNT(*) AS total_filmes
 FROM generos
 JOIN filmes_generos ON generos.id = filmes_generos.genero_id
 GROUP BY generos.id
-ORDER BY total_filmes DESC
+ORDER BY total_filmes DESC;
 
 
