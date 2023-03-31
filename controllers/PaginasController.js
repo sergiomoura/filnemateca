@@ -1,21 +1,73 @@
+// Importar a conexao com o BD
+const { sequelize } = require('../database/models');
+
 const PaginasController = {
-    index: (req, res) => {
-        // 1 - carregar os filmes de filmes.json
-        const filmes = require('../database/filmes.json');
+    index: async (req, res) => {
+
+        // Construindo string de consulta
+        let sql = `
+            SELECT
+                filmes.id,
+                filmes.cartaz,
+                filmes.titulo,
+                JSON_ARRAYAGG(generos.nome) AS generos,
+                filmes.censura,
+                filmes.trailer,
+                filmes.sinopse
+            FROM
+                filmes
+                JOIN filmes_generos ON filmes.id = filmes_generos.filme_id
+                JOIN generos ON filmes_generos.genero_id = generos.id
+            GROUP BY
+                filmes.id,
+                filmes.cartaz,
+                filmes.titulo,
+                filmes.censura,
+                filmes.trailer,
+                filmes.sinopse;
+        `;
         
-        // 2 - passar os filmes para view
-        res.render("index.ejs", {filmes});
+        // Realizando a consulta
+        const filmes = await sequelize.query(sql, {type: sequelize.QueryTypes.SELECT});
+
+        // Enviando view
+        return res.render('index', {filmes});
     },
-    showFilme: (req, res) => {
-        // 1 - Capturar o id do filme desejado
-        const id = req.params.id;
+    showFilme: async (req, res) => {
 
-        // 2 - Capturar O filme desejado
-        const filmes = require('../database/filmes.json');
-        const filme = filmes.find(f => f.id == id);
+        // Capturando o id do filme desejado
+        const id = Number(req.params.id);
 
-        // 3 - Renderizar a view filme.ejs, passando para ela o filme encontrado
-        res.render("filme.ejs", {filme});
+        // Construindo string de consulta
+        let sql = `
+            SELECT
+                filmes.id,
+                filmes.cartaz,
+                filmes.titulo,
+                JSON_ARRAYAGG(generos.nome) AS generos,
+                filmes.censura,
+                filmes.trailer,
+                filmes.sinopse
+            FROM
+                filmes
+                JOIN filmes_generos ON filmes.id = filmes_generos.filme_id
+                JOIN generos ON filmes_generos.genero_id = generos.id
+            WHERE filmes.id = ${id}
+            GROUP BY
+                filmes.id,
+                filmes.cartaz,
+                filmes.titulo,
+                filmes.censura,
+                filmes.trailer,
+                filmes.sinopse;
+        `;
+        
+        // Realizando a consulta
+        const filmes = await sequelize.query(sql, {type: sequelize.QueryTypes.SELECT});
+
+        // Enviando view
+        return res.render("filme.ejs", {filme: filmes[0]});
+        
     },
     editFilme: (req, res)=>{
 

@@ -53,12 +53,12 @@ INSERT INTO generos (nome) VALUES
 
 INSERT INTO filmes (cartaz, titulo, censura, trailer, sinopse) 
 VALUES 
-('https://exemplo.com/filme1.jpg', 'Filme 1', 16, 'https://www.youtube.com/watch?v=123456', 'Sinopse do Filme 1'),
-('https://exemplo.com/filme2.jpg', 'Filme 2', 12, 'https://www.youtube.com/watch?v=789012', 'Sinopse do Filme 2');
+('4671be7bd0cb437f.jpg', 'Filme 1', 16, 'https://www.youtube.com/watch?v=123456', 'Sinopse do Filme 1'),
+('4671be7bd0cb437f.jpg', 'Filme 2', 12, 'https://www.youtube.com/watch?v=789012', 'Sinopse do Filme 2');
 
 INSERT INTO filmes (cartaz, titulo, censura, trailer, sinopse) VALUES
-('https://exemplo.com/cartaz5.jpg', 'Filme 5', 12, 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', 'Sinopse do filme 5'),
-('https://exemplo.com/cartaz6.jpg', 'Filme 6', 16, 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', 'Sinopse do filme 6');
+('4671be7bd0cb437f.jpg', 'Filme 5', 12, 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', 'Sinopse do filme 5'),
+('4671be7bd0cb437f.jpg', 'Filme 6', 16, 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', 'Sinopse do filme 6');
 
 INSERT INTO filmes_generos (filme_id, genero_id) VALUES
 (3, 1), (3, 3), (3, 4), (4, 2), (4, 3), (4, 5);
@@ -71,11 +71,25 @@ VALUES
 
 
 -- Consultar todos os filmes e seus gêneros correspondentes:
-SELECT filmes.titulo, GROUP_CONCAT(generos.nome SEPARATOR ', ') AS generos
-FROM filmes
-JOIN filmes_generos ON filmes.id = filmes_generos.filme_id
-JOIN generos ON filmes_generos.genero_id = generos.id
-GROUP BY filmes.id;
+SELECT
+	filmes.id,
+    filmes.cartaz,
+	filmes.titulo,
+    GROUP_CONCAT(generos.nome SEPARATOR ', ') AS generos,
+    filmes.censura,
+    filmes.trailer,
+    filmes.sinopse
+FROM
+	filmes
+	JOIN filmes_generos ON filmes.id = filmes_generos.filme_id
+	JOIN generos ON filmes_generos.genero_id = generos.id
+GROUP BY
+	filmes.id,
+    filmes.cartaz,
+	filmes.titulo,
+    filmes.censura,
+    filmes.trailer,
+    filmes.sinopse;
 
 -- Consultar todos os filmes de um determinado gênero:
 SELECT filmes.titulo, GROUP_CONCAT(generos.nome SEPARATOR ', ') AS generos
